@@ -25,13 +25,13 @@ pub struct Config {
     case_sensitive: bool,
 }
 impl Config {
-    pub fn new(args: &[String]) -> Result<Config, &str> {
+    pub fn new(args: Vec<String>) -> Result<Config, &'static str> {
         if args.len() < 3 {
             return Err("Not enough arguments!");
         }
         Ok(Config {
-            filename: args[2].clone(),
-            q: args[1].clone(),
+            filename: args[2].to_string(),
+            q: args[1].to_string(),
             case_sensitive: env::var("CASE_SEN").is_ok(),
         })
     }
