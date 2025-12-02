@@ -1,0 +1,6 @@
+This is a raw string
+It can contain "quotes" without escaping
+and special characters like are literal
+This is line 1
+This is line 2
+This is line 3
